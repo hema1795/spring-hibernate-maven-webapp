@@ -19,6 +19,9 @@ pipeline {
 
           stage('deployment stage') {
               steps {
+                  sshagent(['tomcat.dev']) {
+    sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@13.127.87.122'
+}
                 
         }
     }
