@@ -11,7 +11,7 @@ stage('clean')
   stage('deploy')
   {
    sshagent(['tomcat.dev']) {
-    sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@13.127.87.122'
+    sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@13.233.60.237'
 }
   }
 }
